@@ -45,23 +45,47 @@ public class Animal
 
 class Dog : Animal
 {
-    public Dog()
+    int calledGoodDog;
+    public Dog(string inputtedName = "Lassie")
     {
-        name = "Lassie";
+        name = inputtedName;
+        calledGoodDog = 0;
+        species = "Dog";
+    }
+
+    public void CallGoodDog()
+    {
+        calledGoodDog++;
+        Console.WriteLine($"{name} has been called a Good Dog {calledGoodDog} time! Their tail is wagging and they let out a content {sound}");
     }
 }
 
 class Frog : Animal
 {
+    string favouriteSpot;
+    public Frog(string inputtedName = "Kermit", string inputtedFavouriteSpot = "pond")
+    {
+        name = inputtedName;
+        hasTail = false;
+        wantsToPlayFetch = false;
+        sound = "Croak";
+        favouriteSpot = inputtedFavouriteSpot;
+        species = "Frog";
+    }
 
+    public void EnjoySpot()
+    {
+        Console.WriteLine($"The frog {name} sits at it's favourite spot, the {favouriteSpot}, it emitts a content {sound}.");
+    }
 }
 
 class Cat : Animal
 {
     string happyNoise = "";
 
-    public Cat()
+    public Cat(string inputtedName = "Gustaf")
     {
+        name = inputtedName;
         happyNoise = "purr";
         sound = "Meow";
         species = "Cat";
@@ -70,7 +94,7 @@ class Cat : Animal
     
     public void MakeBiscuits()
     {
-        Console.WriteLine($"The cat is so comfy it is making biscuits on the ground. It sounds like {happyNoise}{happyNoise}{happyNoise}");
+        Console.WriteLine($"{name} the cat is so comfy it is making biscuits on the ground. It sounds like {happyNoise}{happyNoise}{happyNoise}");
     }
 }
 
@@ -111,6 +135,6 @@ class DomesticShorthair : Cat
 
     public void EatThingHeShouldNot()
     {
-        Console.WriteLine($"You are the best kitty, the cutest, most fantast- Have you been eating {favouriteSnack} again?!"); 
+        Console.WriteLine($"You are the best kitty, the cutest, most fantast- But {name}! Have you been eating {favouriteSnack} again?!"); 
     }
 }

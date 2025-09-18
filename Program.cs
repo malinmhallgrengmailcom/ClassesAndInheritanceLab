@@ -4,17 +4,27 @@
     {
         static void Main(string[] args)
         {
-            var cat = new Cat();
+            var dog = new Dog();
+            dog.MakeNoise();
+            dog.CallGoodDog();
 
+            var frog = new Frog();
+            frog.MakeNoise();
+            frog.EnjoySpot();
+
+            var cat = new Cat();
             cat.MakeNoise();
+            cat.MakeBiscuits();
 
             var lusse = new DomesticShorthair();
-            lusse.EatThingHeShouldNot();
             lusse.MakeNoise();
+            lusse.EatThingHeShouldNot();
+            
 
-            var tortan = new MaineCoon(true);
-            tortan.MakeBiscuits();
+            var tortan = new MaineCoon("Tortan", true);
             tortan.MakeNoise();
+            tortan.ShouldGroom();
+            
         }
 
     }
