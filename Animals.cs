@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data.Common;
 
+
 public class Animal
 {
     public bool hasTail;
@@ -30,19 +31,21 @@ public class Animal
         Console.WriteLine($"The {species} runs around on its {amountLegs} legs");
     }
 
-    public string PlayFetch()
+    public void PlayFetch()
     {
         if (wantsToPlayFetch)
         {
-            return $"The {species} seems excited to play fetch!";
+            Console.WriteLine($"The {species} seems excited to play fetch!"); 
         }
         else
         {
-            return $"The {species} seems offended you'd even try to play fetch with it";
+            Console.WriteLine($"The {species} seems offended you'd even try to play fetch with it"); 
         }
     }
 }
 
+
+//Defines Dog child with unique constructor and methods
 class Dog : Animal
 {
     int calledGoodDog;
@@ -60,6 +63,7 @@ class Dog : Animal
     }
 }
 
+//Defines Frog child with unique constructor and method
 class Frog : Animal
 {
     string favouriteSpot;
@@ -79,6 +83,7 @@ class Frog : Animal
     }
 }
 
+//Defines Cat child with unique constructor and method
 class Cat : Animal
 {
     string happyNoise = "";
@@ -98,6 +103,7 @@ class Cat : Animal
     }
 }
 
+//Defines MaineCoon, a sub-child of Cat and defines unique constructor and methods
 class MaineCoon : Cat
 {
     int timeToGroom;
@@ -123,6 +129,7 @@ class MaineCoon : Cat
     }
 }
 
+//Defines DomessticShorthair, a sub-child of Cat and defines unique constructor and methods
 class DomesticShorthair : Cat
 {
     string favouriteSnack;
