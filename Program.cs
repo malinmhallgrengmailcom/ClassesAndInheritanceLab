@@ -4,9 +4,13 @@
     {
         static void Main(string[] args)
         {
-            var dog = new Dog();
+            //Sets up objects for all classes
+            //Three objects are created for different cat subclasses
+
+            var dog = new Dog("Fido");
             dog.MakeNoise();
             dog.CallGoodDog();
+            dog.PlayFetch();
 
             var frog = new Frog();
             frog.MakeNoise();
@@ -24,6 +28,7 @@
             var tortan = new MaineCoon("Tortan", true);
             tortan.MakeNoise();
             tortan.ShouldGroom();
+            tortan.PlayFetch();
             
         }
 
